@@ -68,7 +68,11 @@ spec:
           owner: ${{ parameters.owner }}
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
           http_port: 8080
-
+    - id: provenance
+      name: Write Template Provanance
+      action: mitre:create-template-version-file
+      input:
+        myParameter: whatever
     - id: publish
       name: Publish
       action: publish:github

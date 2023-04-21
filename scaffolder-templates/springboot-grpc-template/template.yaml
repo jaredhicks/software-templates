@@ -70,9 +70,7 @@ spec:
           http_port: 8080
     - id: provenance
       name: Write Template Provanance
-      action: mitre:create-template-version-file
-      input:
-        myParameter: whatever
+      action: mitre:write-template-provenance
     - id: publish
       name: Publish
       action: publish:github
